@@ -19,9 +19,7 @@ export const downloadOne = async req => {
             if( end == (req.size-1) ) {
                 writer.close()
             } else {
-                setTimeout(() => {
-                    push(end+1);
-                }, 1);
+                push(end+1);
             }
         });
     };
@@ -52,9 +50,7 @@ export const downloadMultiple = async reqs => {
                                         if( end == (req.size-1) ) {
                                             ctrl.close()
                                         } else {
-                                            setTimeout(() => {
-                                                push(end+1);
-                                            }, 1);
+                                            push(end+1);
                                         }
                                     });
                                 }
